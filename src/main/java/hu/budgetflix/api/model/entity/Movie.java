@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -24,8 +25,8 @@ public class Movie {
 
     private String status;
 
-    @Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
-    private LocalDate created_at;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
     private String hls_path;
 
