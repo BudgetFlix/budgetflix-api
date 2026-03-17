@@ -13,7 +13,8 @@ public class StreamController {
     @GetMapping("/{id}")
     public ResponseEntity<Void> stream (@PathVariable Long id){
         return ResponseEntity.ok()
-                .header("X-Accel-Redirect","/internal/media" + "/movies/" + id + "/hls/index.m3u8")
+                .header("X-Accel-Redirect", "/internal/media/movies/" + id + "/hls/index.m3u8")
+                .header("Content-Type", "application/vnd.apple.mpegurl")
                 .build();
     }
 }
