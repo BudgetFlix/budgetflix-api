@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class StreamController {
 
     @GetMapping("/{id}")
-    public ResponseEntity<Void> stream (@PathVariable Long id){
-        return ResponseEntity.ok()
-                .header("X-Accel-Redirect", "/internal/media/movies/" + id + "/hls/index.m3u8")
-                .header("Content-Type", "application/vnd.apple.mpegurl")
-                .build();
+    public ResponseEntity<String> stream(@PathVariable Long id) {
+
+        // TODO auth check
+
+        String url = "/stream/movies/" + id + "/hls/index.m3u8";
+
+        return ResponseEntity.ok(url);
     }
 }
