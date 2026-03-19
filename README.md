@@ -1,4 +1,4 @@
-# ⚙ BudgetFlix API
+#  BudgetFlix API
 
 > Backend API for metadata and stream access in BudgetFlix.
 
