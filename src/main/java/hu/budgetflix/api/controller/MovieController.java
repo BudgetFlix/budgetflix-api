@@ -1,7 +1,7 @@
 package hu.budgetflix.api.controller;
 
 
-import hu.budgetflix.api.model.dto.MovieDto;
+import hu.budgetflix.api.model.dto.response.MovieDto;
 import hu.budgetflix.api.service.MovieService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
