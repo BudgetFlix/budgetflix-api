@@ -1,6 +1,6 @@
 package hu.budgetflix.api.mapper;
 
-import hu.budgetflix.api.model.dto.MovieDto;
+import hu.budgetflix.api.model.dto.response.MovieDto;
 import hu.budgetflix.api.model.entity.Movie;
 import org.springframework.stereotype.Component;
 

@@ -2,7 +2,7 @@ package hu.budgetflix.api.service;
 
 import hu.budgetflix.api.exception.NotFoundException;
 import hu.budgetflix.api.mapper.MovieMapper;
-import hu.budgetflix.api.model.dto.MovieDto;
+import hu.budgetflix.api.model.dto.response.MovieDto;
 import hu.budgetflix.api.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
