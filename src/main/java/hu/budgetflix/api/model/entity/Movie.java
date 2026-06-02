@@ -1,14 +1,13 @@
 package hu.budgetflix.api.model.entity;
 
+import hu.budgetflix.api.model.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -24,7 +23,8 @@ public class Movie {
 
     private String title;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)

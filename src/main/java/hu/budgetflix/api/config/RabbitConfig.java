@@ -11,11 +11,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    public static final String QUEUE = "video.upload.queue";
+
 
     @Bean
-    public Queue queue() {
-        return new Queue(QUEUE);
+    public Queue uploadQueue(QueueProperties queues) {
+        return new Queue(queues.getUpload(), true);
+    }
+
+    @Bean
+    public Queue uploadRetryQueue(QueueProperties queues) {
+        return new Queue(queues.getUploadRetry(), true);
     }
 
     @Bean
