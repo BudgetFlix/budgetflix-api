@@ -1,5 +1,6 @@
 package hu.budgetflix.api.model.entity;
 
+import hu.budgetflix.api.model.MediaType;
 import hu.budgetflix.api.model.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,9 @@ public class Movie {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @Enumerated(EnumType.STRING)
+    private MediaType mediaType;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)

@@ -3,11 +3,10 @@ package hu.budgetflix.api.controller;
 import hu.budgetflix.api.model.dto.response.JobDto;
 import hu.budgetflix.api.service.JobService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("api/job")
@@ -25,5 +24,13 @@ public class JobController {
         List<JobDto> jobs = jobService.getAllJob();
 
         return ResponseEntity.ok(jobs);
+    }
+
+    @PostMapping("/{id}/retry")
+    public ResponseEntity<Void> getAllJob (@RequestParam UUID id){
+
+        jobService.retry(id);
+
+        return ResponseEntity.ok().build();
     }
 }
