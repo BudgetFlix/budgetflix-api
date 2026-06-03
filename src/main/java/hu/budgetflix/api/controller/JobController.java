@@ -27,7 +27,7 @@ public class JobController {
     }
 
     @PostMapping("/{id}/retry")
-    public ResponseEntity<Void> getAllJob (@RequestParam UUID id){
+    public ResponseEntity<Void> getAllJob (@PathVariable UUID id){
 
         jobService.retry(id);
 
