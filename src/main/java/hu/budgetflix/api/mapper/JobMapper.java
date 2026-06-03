@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class JobMapper {
     public JobDto toDto (Job job) {
-        return new JobDto(job.getId(),job.getStatus());
+        return new JobDto(job.getId(),job.getStatus(), job.getErrorMsg());
     }
 }
