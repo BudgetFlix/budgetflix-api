@@ -39,7 +39,8 @@ public class UploadService {
                 metaData.jobID(),
                 savedMovie.getId(),
                 metaData.videos(),
-                metaData.type()
+                metaData.type(),
+                false
         );
 
         producer.send(message);

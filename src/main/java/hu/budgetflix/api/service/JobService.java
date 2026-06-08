@@ -35,7 +35,7 @@ public class JobService {
     public void retry(UUID id) {
         Job job = jobRepository.getJobById(id);
         Movie movie = job.getMovie();
-        MediaMessage msg = new MediaMessage(job.getId(), movie.getId(), job.getVideos(),movie.getMediaType());
+        MediaMessage msg = new MediaMessage(job.getId(), movie.getId(), job.getVideos(),movie.getMediaType(),true);
 
         videoProducer.send(msg);
     }
