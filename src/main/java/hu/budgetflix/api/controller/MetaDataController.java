@@ -19,7 +19,7 @@ public class MetaDataController {
     private final MetaDataService metaDataService;
 
     @GetMapping("/client")
-    public List<TmdbSearchDto> getmetadata(@RequestParam String query) {
+    public List<TmdbSearchDto> getMetadata(@RequestParam String query) {
         return metaDataService.searchMulti(query);
     }
 }
