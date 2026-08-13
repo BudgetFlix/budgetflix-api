@@ -3,7 +3,6 @@ package hu.budgetflix.api.model.dto.response;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record TmdbSearchRawDto(
-        Long id,
 
         @JsonProperty("media_type")
         String mediaType,
@@ -13,6 +12,15 @@ public record TmdbSearchRawDto(
         String name,
 
         @JsonProperty("poster_path")
-        String posterPath
+        String posterPath,
+
+        String overview,
+
+        @JsonProperty("first_air_date")
+        String firstAirDate,
+
+        @JsonProperty("release_date")
+        String releaseDate
+
 ) {
 }
