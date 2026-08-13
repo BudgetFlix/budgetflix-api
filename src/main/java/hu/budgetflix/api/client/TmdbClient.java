@@ -1,7 +1,6 @@
 package hu.budgetflix.api.client;
 
 
-import hu.budgetflix.api.model.dto.response.TmdbSearchDto;
 import hu.budgetflix.api.model.dto.response.TmdbSearchRawDto;
 import hu.budgetflix.api.model.dto.response.TmdbSearchResponse;
 import hu.budgetflix.api.logging.OutboundHttpLoggingInterceptor;

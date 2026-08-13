@@ -21,16 +21,17 @@ public class MetaDataService {
     public List<TmdbSearchDto> searchMulti(String query) {
         return tmdbClient.search(query)
                 .stream()
-                .filter(item -> "movie".equals(item.mediaType())
-                        || "tv".equals(item.mediaType()))
-                .filter(item -> item.posterPath() != null)
+                .filter(item -> ("movie".equals(item.mediaType())
+                        || "tv".equals(item.mediaType())) && item.posterPath() != null)
                 .map(item -> new TmdbSearchDto(
-                        item.id(),
+
                         item.mediaType(),
                         item.title() != null
                                 ? item.title()
                                 : item.name(),
-                        TMDB_IMAGE_BASE_URL + item.posterPath()
+                        TMDB_IMAGE_BASE_URL + item.posterPath(),
+                        item.overview(),
+                        item.releaseDate() != null ? item.releaseDate() : item.firstAirDate()
                 ))
                 .toList();
     }
