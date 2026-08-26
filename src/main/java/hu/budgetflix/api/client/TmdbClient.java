@@ -1,7 +1,7 @@
 package hu.budgetflix.api.client;
 
 
-import hu.budgetflix.api.model.dto.response.TmdbSearchRawDto;
+import hu.budgetflix.api.model.dto.request.TmdbSearchRawDto;
 import hu.budgetflix.api.model.dto.response.TmdbSearchResponse;
 import hu.budgetflix.api.logging.OutboundHttpLoggingInterceptor;
 import org.springframework.beans.factory.annotation.Value;

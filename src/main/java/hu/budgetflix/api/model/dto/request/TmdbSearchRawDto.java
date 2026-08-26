@@ -1,4 +1,4 @@
-package hu.budgetflix.api.model.dto.response;
+package hu.budgetflix.api.model.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -20,7 +20,11 @@ public record TmdbSearchRawDto(
         String firstAirDate,
 
         @JsonProperty("release_date")
-        String releaseDate
+        String releaseDate,
+
+        @JsonProperty("backdrop_path")
+        String backgroundPath
+
 
 ) {
 }
