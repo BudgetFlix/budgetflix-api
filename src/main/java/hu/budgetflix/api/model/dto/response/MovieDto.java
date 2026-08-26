@@ -1,4 +1,4 @@
 package hu.budgetflix.api.model.dto.response;
 
-public record MovieDto(String title, Long id,String image ) {
+public record MovieDto(String title, Long id,String overview ,String poster, String background ) {
 }

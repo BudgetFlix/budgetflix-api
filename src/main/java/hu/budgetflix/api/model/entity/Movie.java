@@ -34,6 +34,8 @@ public class Movie {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    private String overview;
+
     private String hls_path;
 
 

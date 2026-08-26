@@ -8,8 +8,10 @@ import org.springframework.stereotype.Component;
 public class MovieMapper {
 
     public MovieDto toDto(Movie movie){
-        return new MovieDto(movie.getTitle(), movie.getId(),giveImagePath(movie.getId()));
+        long id = movie.getId();
+        return new MovieDto(movie.getTitle(), id, movie.getOverview(), givePosterPath(id),giveBackgroundPath(id));
     }
 
-    private String giveImagePath (Long id){return "/images/movies/" + id + "/poster.jpg";}
+    private String givePosterPath (long id){return "/images/movies/" + id + "/poster.jpg";}
+    private String giveBackgroundPath (long id){return "/images/movies/" + id + "/background.jpg";}
 }
