@@ -28,6 +28,7 @@ public class UploadService {
     public void uploadMovie(UploadMedia metaData) {
         Movie movie = new Movie();
         movie.setTitle(metaData.title());
+        movie.setOverview(metaData.overview());
         movie.setStatus(Status.PROCESS);
 
         Movie savedMovie = movieRepository.save(movie);
